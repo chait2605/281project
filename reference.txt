@@ -1,0 +1,4 @@
+Add your ideas/comments/list of things to remember, here:
+
+=>to open my sql database: localhost:XXXX/phpmyadmin
+=>re-use the components already available in the template
