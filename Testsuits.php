@@ -416,7 +416,7 @@
                 <div class="form-group">
                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                      <!--   <a href = "CreateTestSuite.html"></a>-->
-                        <a href ="CreateTestSuite.php" > <button formaction="CreateTestSuite.html" type="Submit" class="btn btn-success">Create New Test Suite</button> </a>
+                        <a href ="CreateTestSuite.php" > <button formaction="CreateTestSuite.php" type="Submit" class="btn btn-success">Create New Test Suite</button> </a>
                     </div>
                 </div>
                     </form>
