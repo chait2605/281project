@@ -277,10 +277,9 @@
         <!-- /top navigation -->
         <div class="clearfix"></div>
         <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="x_panel">
-                    <div class="x_title">
-                        <h2>Basic Tables <small>basic table subtitle</small></h2>
+                    <div class="x_title"
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -341,12 +340,11 @@
                     </div>
                 </div>
             </div>
-
-            <div class="clearfix"></div>
+    </div>
             <div class="ln_solid"></div>
             <div class="form-group">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                    <button formaction="Testsuits.php" type="submit" class="btn btn-success">Back</button>
+                    <a href ="CreateTestSuite.php" >    <button formaction="Testsuits.php" type="submit" class="btn btn-success">Back</button></a>
                 </div>
             </div>
 
