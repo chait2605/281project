@@ -344,7 +344,7 @@
             <div class="ln_solid"></div>
             <div class="form-group">
                 <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                    <a href ="CreateTestSuite.php" >    <button formaction="Testsuits.php" type="submit" class="btn btn-success">Back</button></a>
+                    <a href ="TestSuits.php" >    <button formaction="Testsuits.php" type="submit" class="btn btn-success">Back</button></a>
                 </div>
             </div>
 
