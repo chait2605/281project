@@ -63,7 +63,7 @@
                     <div class="menu_section">
                         <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li> <a href="Dashboard.html"> <i class="fa fa-home"></i>Dashboard </a></li>
+                            <li> <a href="Dashboard.php"> <i class="fa fa-home"></i>Dashboard </a></li>
                                <!-- <ul class="nav child_menu">
                                     <li><a href="index.html">Dashboard</a></li>
                                     <li><a href="index2.html">Dashboard2</a></li>
@@ -71,7 +71,7 @@
                                 </ul>-->
                             <li><a><i class="fa fa-edit"></i> Test Plan <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="Testsuits.html">Test Suites</a></li>
+                                    <li><a href="Testsuits.php">Test Suites</a></li>
                                     <!--<li><a href="form_advanced.html">Advanced Components</a></li>
                                     <li><a href="form_validation.html">Form Validation</a></li>
                                     <li><a href="form_wizards.html">Form Wizard</a></li>
