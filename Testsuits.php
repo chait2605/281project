@@ -343,7 +343,7 @@
                                         </td>
                                         <td class=" ">121000040</td>
                                         <td class=" ">AAAAAA</td>
-                                        <td class=" last"><a href="#">View</a>
+                                        <td class=" last"><a href="exampleview.php">View</a>
                                         <td class=" last"><a href="#">Update</a>
                                         <td class=" last"><a href="#">Delete</a>
                                     </td>
@@ -355,7 +355,7 @@
                                         </td>
                                         <td class=" ">121000039</td>
                                         <td class=" ">XXXXXX</td>
-                                        <td class=" last"><a href="#">View</a>
+                                        <td class=" last"><a href="exampleview.php">View</a>
                                         <td class=" last"><a href="#">Update</a>
                                         <td class=" last"><a href="#">Delete</a>
                                         </td>
