@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Test Manager | </title>
+    <title>Test Manager</title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Test Manager</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Test Manager</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -52,23 +52,23 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
+                      <li><a href="index.php">Dashboard</a></li>
+                      <!--<li><a href="index2.php">Dashboard2</a></li>
+                      <li><a href="index3.php">Dashboard3</a></li>-->
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Projects <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">General Form</a></li>
+                      <!--<li><a href="form.html">General Form</a></li>
                       <li><a href="form_advanced.html">Advanced Components</a></li>
-                      <li><a href="form_validation.html">Form Validation</a></li>
-                      <li><a href="form_wizards.html">Form Wizard</a></li>
-                      <li><a href="form_upload.html">Form Upload</a></li>
-                      <li><a href="form_buttons.html">Form Buttons</a></li>
+                      <li><a href="form_validation.html">Form Validation</a></li>-->
+                      <li><a href="form_wizards.php">Create Project</a></li>
+                      <li><a href="form_upload.php">Upload Project Documents</a></li>
+                      <!--<li><a href="form_buttons.html">Form Buttons</a></li>-->
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
+                  <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
+                    <!--<ul class="nav child_menu">
                       <li><a href="general_elements.html">General Elements</a></li>
                       <li><a href="media_gallery.html">Media Gallery</a></li>
                       <li><a href="typography.html">Typography</a></li>
@@ -78,32 +78,32 @@
                       <li><a href="invoice.html">Invoice</a></li>
                       <li><a href="inbox.html">Inbox</a></li>
                       <li><a href="calendar.html">Calendar</a></li>
-                    </ul>
+                    </ul>-->
                   </li>
-                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
+                  <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
+                    <!--<ul class="nav child_menu">
                       <li><a href="tables.html">Tables</a></li>
                       <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                    </ul>
+                    </ul>-->
                   </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
+                  <li><a><i class="fa fa-bar-chart-o"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
+                    <!--<ul class="nav child_menu">
                       <li><a href="chartjs.html">Chart JS</a></li>
                       <li><a href="chartjs2.html">Chart JS2</a></li>
                       <li><a href="morisjs.html">Moris JS</a></li>
                       <li><a href="echarts.html">ECharts</a></li>
                       <li><a href="other_charts.html">Other Charts</a></li>
-                    </ul>
+                    </ul>-->
                   </li>
-                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
+                  <li><a><i class="fa fa-clone"></i>Projects Summary <span class="fa fa-chevron-down"></span></a>
+                    <!--<ul class="nav child_menu">
                       <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
                       <li><a href="fixed_footer.html">Fixed Footer</a></li>
-                    </ul>
+                    </ul>-->
                   </li>
                 </ul>
               </div>
-              <div class="menu_section">
+              <!--<div class="menu_section">
                 <h3>Live On</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
@@ -144,7 +144,7 @@
                   </li>                  
                   <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
                 </ul>
-              </div>
+              </div>-->
 
             </div>
             <!-- /sidebar menu -->
@@ -191,7 +191,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="login.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
@@ -270,7 +270,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Form Wizards</h3>
+                <h3>Create New Project</h3>
               </div>
 
               <div class="title_right">
@@ -291,7 +291,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Form Wizards <small>Sessions</small></h2>
+                    <h2>New Project <small>add a new project</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -305,7 +305,7 @@
                         </ul>
                       </li>
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
+                      </    li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
@@ -313,7 +313,7 @@
 
 
                     <!-- Smart Wizard -->
-                    <p>This is a basic form wizard example that inherits the colors from the selected scheme.</p>
+                    <p>Fill the details below to create a new project</p>
                     <div id="wizard" class="form_wizard wizard_horizontal">
                       <ul class="wizard_steps">
                         <li>
@@ -321,7 +321,7 @@
                             <span class="step_no">1</span>
                             <span class="step_descr">
                                               Step 1<br />
-                                              <small>Step 1 description</small>
+                                              <small>Basic Details</small>
                                           </span>
                           </a>
                         </li>
@@ -330,7 +330,7 @@
                             <span class="step_no">2</span>
                             <span class="step_descr">
                                               Step 2<br />
-                                              <small>Step 2 description</small>
+                                              <small>Project Description</small>
                                           </span>
                           </a>
                         </li>
@@ -339,7 +339,7 @@
                             <span class="step_no">3</span>
                             <span class="step_descr">
                                               Step 3<br />
-                                              <small>Step 3 description</small>
+                                              <small>Resource Details</small>
                                           </span>
                           </a>
                         </li>
@@ -348,7 +348,7 @@
                             <span class="step_no">4</span>
                             <span class="step_descr">
                                               Step 4<br />
-                                              <small>Step 4 description</small>
+                                              <small>Finish project creation</small>
                                           </span>
                           </a>
                         </li>
@@ -357,40 +357,40 @@
                         <form class="form-horizontal form-label-left">
 
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Project Name <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                               <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Organization or Client Name<span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                               <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Middle Name / Initial</label>
+                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Release/Version</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                               <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Gender</label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Type of testing</label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                               <div id="gender" class="btn-group" data-toggle="buttons">
                                 <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                  <input type="radio" name="gender" value="male"> &nbsp; Male &nbsp;
+                                  <input type="radio" name="gender" value="male"> &nbsp; Manual &nbsp;
                                 </label>
                                 <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                                  <input type="radio" name="gender" value="female"> Female
+                                  <input type="radio" name="gender" value="female"> Automation
                                 </label>
                               </div>
                             </div>
                           </div>
                           <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Creation <span class="required">*</span>
                             </label>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                               <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
@@ -401,39 +401,42 @@
 
                       </div>
                       <div id="step-2">
-                        <h2 class="StepTitle">Step 2 Content</h2>
+                        <h2 class="StepTitle">Add a brief description about the project</h2>
                         <p>
-                          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
                         </p>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <input type="text" id="description" required="required" class="form-control col-md-7 col-xs-12">
+                          </div>
                         </p>
                       </div>
                       <div id="step-3">
                         <h2 class="StepTitle">Step 3 Content</h2>
                         <p>
-                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                      </div>
-                      <div id="step-4">
-                        <h2 class="StepTitle">Step 4 Content</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                          in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          <form class="form-horizontal form-label-left">
+
+                              <div class="form-group">
+                                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Mobile Simulator Name <span class="required">*</span>
+                                  </label>
+                                  <div class="col-md-6 col-sm-6 col-xs-12">
+                                      <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Mobile OS Name<span class="required">*</span>
+                                  </label>
+                                  <div class="col-md-6 col-sm-6 col-xs-12">
+                                      <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Any External Resources</label>
+                                  <div class="col-md-6 col-sm-6 col-xs-12">
+                                      <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                                  </div>
+                              </div>
+                          </form>
                         </p>
                       </div>
 
@@ -444,9 +447,9 @@
 
 
 
-                    <h2>Example: Vertical Style</h2>
+                   <!-- <h2>Example: Vertical Style</h2> -->
                     <!-- Tabs -->
-                    <div id="wizard_verticle" class="form_wizard wizard_verticle">
+                    <!--<div id="wizard_verticle" class="form_wizard wizard_verticle">
                       <ul class="list-unstyled wizard_steps">
                         <li>
                           <a href="#step-11">
@@ -565,7 +568,7 @@
                           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                       </div>
-                    </div>
+                    </div>-->
                     <!-- End SmartWizard Content -->
                   </div>
                 </div>
@@ -578,7 +581,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+              Crowd Sourced Testing-MTaaS: Test Manager Module by <a href="https://colorlib.com">Project Group 8</a>
           </div>
           <div class="clearfix"></div>
         </footer>
