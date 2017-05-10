@@ -26,9 +26,10 @@
         <br/>
         <br/>
         <tr>
-            <td><input type="submit" name="createproject" class="textInput" value="Create"></td>
-            <td><input type="submit" name="deleteproject" class="textInput" value="Delete"></td>
-            <td><input type="submit" name="updateproject" class="textInput" value="Update"></td>
+            <td></td>
+            <td><input type="submit" name="createproject" class="textInput" value="Create">
+            <input type="submit" name="deleteproject" class="textInput" value="Delete">
+            <input type="submit" name="updateproject" class="textInput" value="Update"></td>
         </tr>
         </div>
 
