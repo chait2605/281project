@@ -1,7 +1,7 @@
 <html>
 
 <body>
-<p style = "font-size: 13pt" align="center">
+<!--<p style = "font-size: 13pt" align="center">
     Enter your project details in the form below
     <br/>
 <h1 align="center">project creation Form</h1>
@@ -36,7 +36,40 @@
     </table>
 
 
+</form>-->
+
+<form method="post" action="datademo.php">
+    <p style = "font-size: 13pt" align="center">
+        Enter your project details in the form below
+        <br/>
+    <h1 align="center">project creation Form</h1>
+    <form method="post" action="datademo.php">
+        <table width ='600' cellpadding='5' cellspace ='5'>
+            <tr>
+                <td align="center">Project Name</td>
+                <td align="center">Project Description</td>
+                <td align="center">Release Name</td>
+                <td align="center">Release Number</td>
+            </tr>
+
+            <tr>
+                <td><input type="text" name="projectname" class="textInput"></td>
+                <td><input type="text" name="projectdesc" class="textInput" required></td>
+                <td><input type="text" name="releasename" class="textInput" required></td>
+                <td><input type="text" name="releasenumber" class="textInput" required></td>
+                <td><input type="submit" name="createproject" class="textInput" value="Create">
+            </tr>
+
+
+
+
+        </table>
+
 </form>
+
+
+
+
 
 </body>
 
@@ -72,15 +105,23 @@ if(isset($_POST['createproject'])){
 
     $query = mysqli_query($db,$sql) or die(mysqli_error($db));
 }
+if(isset($_POST['deleteproject'])){
 
+    $projectname = $_POST['projectname'];
+    $projectdesc = $_POST['projectdesc'];
+    $releasename = $_POST['releasename'];
+    $releasenumber = $_POST['releasenumber'];
 
+    $sql = "DELETE FROM projects WHERE project_name='$projectname'";
 
+    $query = mysqli_query($db,$sql) or die(mysqli_error($db));
+}
 
 $sqlselect = "SELECT * FROM projects";
 
 $query = mysqli_query($db,$sqlselect) or die(mysqli_error($db));
 
-print("<table width ='600' cellpadding='5' cellspace ='5'>
+print("<form method='post' action='datademo.php'><table width ='600' cellpadding='5' cellspace ='5'>
     <tr>
        <td> <strong> Project Name  </strong></td>
        <td> <strong> Project Desc </strong></td>
@@ -95,10 +136,25 @@ while ($row = mysqli_fetch_array($query)){
     	<td> ". $row['project_desc']." </td>
     	<td>".  $row['release_name']."</td>
     	<td>".  $row['release_number']."</td>
-    </tr>";
+    	<td><input type=\"submit\" name=\"updateproject\" class=\"textInput\" value=\"Update\">
+    	<td><input type=\"submit\" name=\"deleteproject\" class=\"textInput\" value=\"Delete\">
+    	</tr>
+    ";
 
 }
+
 echo "</table>";
+echo "</form>";
 
 
 ?>
+
+
+
+
+
+
+
+
+
+
