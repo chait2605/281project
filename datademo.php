@@ -46,10 +46,10 @@
     <form method="post" action="datademo.php">
         <table width ='600' cellpadding='5' cellspace ='5'>
             <tr>
-                <td align="center">Project Name</td>
-                <td align="center">Project Description</td>
-                <td align="center">Release Name</td>
-                <td align="center">Release Number</td>
+                <th align="center">Project Name</th>
+                <th align="center">Project Description</th>
+                <th align="center">Release Name</th>
+                <th align="center">Release Number</th>
             </tr>
 
             <tr>
@@ -76,17 +76,10 @@
 </html>
 
 
-
-
-
-
-
-
-
 <?php
 
 //connect to database
-$db = new mysqli("aadpk8b9wq1ns3.crugw38qv3oq.us-west-1.rds.amazonaws.com","CMPE281","cmpe28103","cmpe281");
+$db = new mysqli("aadpk8b9wq1ns3.crugw38qv3oq.us-west-1.rds.amazonaws.com","CMPE281","cmpe28103","cloud281");
 
 //check connection
 if( $db->connect_error ){
@@ -105,49 +98,70 @@ if(isset($_POST['createproject'])){
 
     $query = mysqli_query($db,$sql) or die(mysqli_error($db));
 }
-if(isset($_POST['deleteproject'])){
+if(isset($_POST['update'])){
 
+    $id = $_POST['id'];
     $projectname = $_POST['projectname'];
     $projectdesc = $_POST['projectdesc'];
     $releasename = $_POST['releasename'];
     $releasenumber = $_POST['releasenumber'];
 
-    $sql = "DELETE FROM projects WHERE project_name='$projectname'";
+    $sql = "UPDATE projects SET project_name='$projectname',project_desc='$projectdesc',release_name='$releasename',release_number='$releasenumber' WHERE id = '$id'";
 
     $query = mysqli_query($db,$sql) or die(mysqli_error($db));
 }
+
+if(isset($_POST['delete'])){
+
+    $id = $_POST['id'];
+    $projectname = $_POST['projectname'];
+    $projectdesc = $_POST['projectdesc'];
+    $releasename = $_POST['releasename'];
+    $releasenumber = $_POST['releasenumber'];
+
+    $sql = "DELETE FROM projects WHERE id = '$id'";
+
+    $query = mysqli_query($db,$sql) or die(mysqli_error($db));
+}
+
 
 $sqlselect = "SELECT * FROM projects";
 
 $query = mysqli_query($db,$sqlselect) or die(mysqli_error($db));
 
-print("<form method='post' action='datademo.php'><table width ='600' cellpadding='5' cellspace ='5'>
-    <tr>
-       <td> <strong> Project Name  </strong></td>
-       <td> <strong> Project Desc </strong></td>
-       <td> <strong> Release Name </strong></td>
-       <td> <strong> Release Number </strong></td>
-    </tr>");
-
-while ($row = mysqli_fetch_array($query)){
-    echo"
-    <tr>
-    	<td> ". $row['project_name']."</td>
-    	<td> ". $row['project_desc']." </td>
-    	<td>".  $row['release_name']."</td>
-    	<td>".  $row['release_number']."</td>
-    	<td><input type=\"submit\" name=\"updateproject\" class=\"textInput\" value=\"Update\">
-    	<td><input type=\"submit\" name=\"deleteproject\" class=\"textInput\" value=\"Delete\">
-    	</tr>
-    ";
-
-}
-
-echo "</table>";
-echo "</form>";
-
-
 ?>
+
+<table width ='600' cellpadding='5' cellspace ='5'>
+
+    <?php
+    while($row = mysqli_fetch_array($query)){
+
+        echo "<tr><form action='datademo.php' method='post'>";
+        echo "<input type='hidden' name='id' value='".$row['id']."'>";
+        echo "<td><input type='text' name='projectname' value='".$row['project_name']."'></td>";
+        echo "<td><input type='text' name='projectdesc' value='".$row['project_desc']."'></td>";
+        echo "<td><input type='text' name='releasename' value='".$row['release_name']."'></td>";
+        echo "<td><input type='text' name='releasenumber' value='".$row['release_number']."'></td>";
+        echo "<td><input type='submit' name='update' value='Update'></td>";
+        echo "<td><input type='submit' name='delete' value='Delete'></td>";
+        echo "</form></tr>";
+
+    }
+    ?>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
