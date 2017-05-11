@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Test Manager! | </title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +39,7 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
+                <a class="btn btn-default submit" href="index.php">Log in</a>
                 <a class="reset_pass" href="#">Lost your password?</a>
               </div>
 
@@ -76,7 +76,7 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
+                <a class="btn btn-default submit" href="index.php">Submit</a>
               </div>
 
               <div class="clearfix"></div>
@@ -90,7 +90,7 @@
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <h1><i class="fa fa-paw"></i> Test Manager!</h1>
                   <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
               </div>
