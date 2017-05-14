@@ -71,7 +71,7 @@
                                    <!-- <li><a href="form.php">General Form</a></li>
                                     <li><a href="form_advanced.php">Advanced Components</a></li>
                                     <li><a href="form_validation.php">Form Validation</a></li>-->
-                                    <li><a href="form_wizards.php">Create Project</a></li>
+                                    <li><a href="CreateTestSuite.php">Create Project</a></li>
                                     <li><a href="form_upload.php">Upload Project Documents</a></li>
                                     <!--<li><a href="form_buttons.php">Form Buttons</a></li>-->
                                 </ul>
