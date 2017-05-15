@@ -71,14 +71,14 @@
                                    <!-- <li><a href="form.php">General Form</a></li>
                                     <li><a href="form_advanced.php">Advanced Components</a></li>
                                     <li><a href="form_validation.php">Form Validation</a></li>-->
-                                    <li><a href="CreateTestSuite.php">Create Project</a></li>
+                                    <li><a href="existingProjects.php">Current Projects</a></li>
                                     <li><a href="form_upload.php">Upload Project Documents</a></li>
                                     <!--<li><a href="form_buttons.php">Form Buttons</a></li>-->
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
-                                <!--<ul class="nav child_menu">
-                                    <li><a href="general_elements.php">General Elements</a></li>
+                                <ul class="nav child_menu">
+                                   <!-- <li><a href="general_elements.php">General Elements</a></li>
                                     <li><a href="media_gallery.php">Media Gallery</a></li>
                                     <li><a href="typography.php">Typography</a></li>
                                     <li><a href="icons.php">Icons</a></li>
@@ -86,8 +86,9 @@
                                     <li><a href="widgets.php">Widgets</a></li>
                                     <li><a href="invoice.php">Invoice</a></li>
                                     <li><a href="inbox.php">Inbox</a></li>
-                                    <li><a href="calendar.php">Calendar</a></li>
-                                </ul>-->
+                                    <li><a href="calendar.php">Calendar</a></li>-->
+                                    <li><a href="createViewTS.php">Test Suites</a></li>
+                                </ul>
                             </li>
                             <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
                                 <!--<ul class="nav child_menu">
