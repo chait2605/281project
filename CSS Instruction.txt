@@ -1,0 +1,15 @@
+1) 
+
+<li><a><i class="fa fa-edit"></i> Projects Summary <span class="fa fa-chevron-down"></span></a>
+<ul class="nav child_menu">
+<li><a href="temp-summary.php">Show All</a></li>
+
+Add above lines to the left pane menu of every webpage to show the link to “All Projects” Page which is temp-summary.php
+
+2) Please replace your css file custom.css in build/css folder with the one in the folder I have shared. 
+    It has CSS for table. It won’t affect other code, as all the other pages use custom.min css file.
+
+3) If you don’t want that, rename my custom.css file to say, newcustom.css and make following 
+    change at Line 20 of temp-summary.php
+	<!-- Custom Theme Style -->	
+		<link href="build/css/newcustom.css" rel="stylesheet">
