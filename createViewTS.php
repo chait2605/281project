@@ -265,7 +265,7 @@
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <button type="submit" class="btn btn-success" name="createproject">Create Test Suite</button>
+                                            <button type="submit" class="btn btn-success" name="createtestsuite">Create Test Suite</button>
                                         </div>
                                     </div>
 
@@ -286,7 +286,7 @@
                 }
 
 
-                if(isset($_POST['createproject'])){
+                if(isset($_POST['createtestsuite'])){
 
                     $testsuitename = $_POST['tsname'];
                     $testsuitedesc = $_POST['tsdesc'];
