@@ -68,14 +68,13 @@
                             <li><a href="index.php"> <i class="fa fa-home"></i>Dashboard</a></li>
                             <li><a><i class="fa fa-edit"></i> Projects <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="CreateTestSuite.php">General Form</a></li>
-                                    <li><a href="form_upload.php">Advanced Components</a></li>
-                                    <li><a href="existingProjects.php">Existing Projects</a></li>
+                                    <li><a href="existingProjects.php">Current Projects</a></li>
+                                    <li><a href="form_upload.php">Upload Project Documents</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="createTestCase.php">Create Test Cases</a></li>
+                                    <li><a href="createViewTS.php">Test Suites</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
