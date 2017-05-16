@@ -38,10 +38,13 @@
 
 
         $issue_id = $json_issue_arr[$json_issue_id];
-        $issue_summary =
+        $issue_summary = $json_issue_arr[$json_issue_summary];
+        $issue_type = $json_issue_arr[$json_issue_type];
 
 
         echo $issue_id;
+        echo $issue_summary;
+        echo $issue_type;
 
     }
 
