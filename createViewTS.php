@@ -77,11 +77,32 @@
                                     <li><a href="createViewTS.php">Test Suites</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                           <!-- <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="tables.html">Tables</a></li>
                                     <li><a href="tables_dynamic.html">Table Dynamic</a></li>
                                 </ul>
+                            </li>-->
+                            <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
+                                <!--<ul class="nav child_menu">
+                                    <li><a href="tables.php">Tables</a></li>
+                                    <li><a href="tables_dynamic.php">Table Dynamic</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a><i class="fa fa-bar-chart-o"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
+                                <!--<ul class="nav child_menu">
+                                    <li><a href="chartjs.php">Chart JS</a></li>
+                                    <li><a href="chartjs2.php">Chart JS2</a></li>
+                                    <li><a href="morisjs.php">Moris JS</a></li>
+                                    <li><a href="echarts.php">ECharts</a></li>
+                                    <li><a href="other_charts.php">Other Charts</a></li>
+                                </ul>-->
+                            </li>
+                            <li><a><i class="fa fa-clone"></i>Projects Summary <span class="fa fa-chevron-down"></span></a>
+                                <!--<ul class="nav child_menu">
+                                    <li><a href="fixed_sidebar.php">Fixed Sidebar</a></li>
+                                    <li><a href="fixed_footer.php">Fixed Footer</a></li>
+                                </ul>-->
                             </li>
                         </ul>
                     </div>
