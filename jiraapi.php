@@ -33,7 +33,7 @@
         $json_issue_arr = json_decode($result,true);
         $json_issue_id = "key";
         $json_issue_summary = "summary";
-        $json_issue_type = "issuetype";
+        $json_issue_type = "name";
 
 
 
