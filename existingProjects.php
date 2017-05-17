@@ -306,8 +306,6 @@
                                     echo "</form></tr>";
 
                                 }
-
-
                                 ?>
                             </table>
                         </div>
