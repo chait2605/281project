@@ -77,10 +77,19 @@
                                     <li><a href="createViewTS.php">Test Suites</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                            <li><a><i class="fa fa-table"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="tables.html">Tables</a></li>
-                                    <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                    <li><a href="bugJira.php">Log Issues</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-table"></i>Test Automation <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="automatedTC.php">Automated Scripts</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-bar-chart-o"></i> Project Summary <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="temp-summary.php">All Projects</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -293,7 +302,7 @@
                                     echo "<td class='col-sm-4'><input type='text' name='releasenumber' value='".$row['release_number']."'></td>";
                                     echo "<td><button type='submit' class='btn btn-success' name='update'>Update</button></td>";
                                     echo "<td><button type='submit' class='btn btn-success' name='delete'>Delete</button></td>";
-                                    echo "<td><button type='submit' class='btn btn-success' name='testsuite'><a href='createViewTS.php'>Create/View Test Suite</a></button></td>";
+                                    echo "<td><button type='submit' class='btn btn-success' name='testsuite'><a href='createViewTS.php'>Create Test Suite</a></button></td>";
                                     echo "</form></tr>";
 
                                 }
