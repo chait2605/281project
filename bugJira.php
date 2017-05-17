@@ -48,7 +48,7 @@ if( $db->connect_error ){
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Test Manager</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -96,16 +96,17 @@ if( $db->connect_error ){
                                     <li><a href="bugJira.php">Log Issues</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="automatedTC.php">Automated Scripts</a></li>
+                                </ul>
+                            </li>
                             <li><a><i class="fa fa-bar-chart-o"></i> Project Summary <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="temp-summary.php">All Projects</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="bugJira.php">Automated Scripts</a></li>
-                                </ul>
-                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -375,40 +376,40 @@ if( $db->connect_error ){
 </div>
 
 <!-- jQuery -->
-<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<script src="vendors/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
-<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<script src="vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
-<script src="../vendors/nprogress/nprogress.js"></script>
+<script src="vendors/nprogress/nprogress.js"></script>
 <!-- bootstrap-progressbar -->
-<script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
 <!-- iCheck -->
-<script src="../vendors/iCheck/icheck.min.js"></script>
+<script src="vendors/iCheck/icheck.min.js"></script>
 <!-- bootstrap-daterangepicker -->
-<script src="../vendors/moment/min/moment.min.js"></script>
-<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="vendors/moment/min/moment.min.js"></script>
+<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- bootstrap-wysiwyg -->
-<script src="../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-<script src="../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-<script src="../vendors/google-code-prettify/src/prettify.js"></script>
+<script src="vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="vendors/google-code-prettify/src/prettify.js"></script>
 <!-- jQuery Tags Input -->
-<script src="../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<script src="vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
 <!-- Switchery -->
-<script src="../vendors/switchery/dist/switchery.min.js"></script>
+<script src="vendors/switchery/dist/switchery.min.js"></script>
 <!-- Select2 -->
-<script src="../vendors/select2/dist/js/select2.full.min.js"></script>
+<script src="vendors/select2/dist/js/select2.full.min.js"></script>
 <!-- Parsley -->
-<script src="../vendors/parsleyjs/dist/parsley.min.js"></script>
+<script src="vendors/parsleyjs/dist/parsley.min.js"></script>
 <!-- Autosize -->
-<script src="../vendors/autosize/dist/autosize.min.js"></script>
+<script src="vendors/autosize/dist/autosize.min.js"></script>
 <!-- jQuery autocomplete -->
-<script src="../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<script src="vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
 <!-- starrr -->
-<script src="../vendors/starrr/dist/starrr.js"></script>
+<script src="vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
-<script src="../build/js/custom.min.js"></script>
+<script src="build/js/custom.min.js"></script>
 
 </body>
 </html>

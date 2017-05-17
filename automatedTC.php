@@ -251,94 +251,15 @@ if( $db->connect_error ){
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <ul class="nav navbar-right panel_toolbox">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Settings 1</a>
-                                            </li>
-                                            <li><a href="#">Settings 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                                    </li>
-                                </ul>
+
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
 
 
-                                <?php
-                                if(isset($_POST['createissue'])) {
-
-                                    $base64_usrpwd = base64_encode($_POST['user'] . ":" . $_POST['pass']);
-
-                                    $ch = curl_init();
-                                    $jiraurl = "https://crowstestmanager.atlassian.net/rest/api/2/issue/";
-                                    curl_setopt($ch, CURLOPT_URL, $jiraurl);
-                                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                                    curl_setopt($ch, CURLOPT_POST, 1);
-                                    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Authorization: Basic ' . $base64_usrpwd));
-
-
-                                    $arr['project'] = array('key' => 'CT281');
-                                    $arr['summary'] = $_POST['summary'];
-                                    $arr['description'] = $_POST['description'];
-                                    $arr['issuetype'] = array('name' => $_POST['type']);
-
-                                    $json_arr['fields'] = $arr;
-
-                                    $json_string = json_encode($json_arr, JSON_NUMERIC_CHECK | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-
-                                    //echo $json_string;
-
-                                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-                                    curl_setopt($ch, CURLOPT_POSTFIELDS, $json_string);
-                                    $result = curl_exec($ch);
-                                    //echo $result;
-                                    curl_close($ch);
-
-
-                                    $json_issue_arr = json_decode($result,true);
-                                    $json_issue_id = "key";
-                                    $json_issue_summary = $arr['summary'];
-                                    $json_issue_type = $arr['issuetype']['name'];
-
-                                    $issue_id = $json_issue_arr[$json_issue_id];
-
-                                    //echo $issue_id;
-                                    //echo $json_issue_summary;
-                                    //echo $json_issue_type;
-
-                                    //echo "<br><a href='https://crowstestmanager.atlassian.net/browse/$issue_id'>$issue_id</a>";
-
-                                    if($issue_id){
-
-                                        $sql = "INSERT INTO defects(issue_id, issue_summary, issue_type) VALUE('$issue_id', '$json_issue_summary', '$json_issue_type')";
-
-                                        $result = mysqli_query($db, $sql) or die("Bad connection: $sql");
-
-
-                                    }
-
-
-                                    echo "<h3 align='center'>Thank You! Issue has been Created Succesfully!!</h3>";
-                                    echo "<br><div align='center'><button width='40%' height='30%' type='submit' name='issuelink' class='btn btn-success'><a href='https://crowstestmanager.atlassian.net/browse/$issue_id'><h2>$issue_id</h2></a></button></div>";
-                                    echo "<br><div align='center'><button width='60%' height='40%' type='submit' name='createissuelink' class='btn btn - success'><a href='bugJira.php'><h2>Create a new Defect</h2></a></button></div>";
-
-                                }else{
-
-
-                                    echo "<h2 align=\"center\">Please try creating a new issue!</h2>";
-                                    echo "<br><div align='center'><button width='40%' height='30%' type='submit' name='issuelink' class='btn btn - success'><a href='bugJira.php'><h2>Create a new Defect</h2></a></button></div>";
-
-
-                                }
-
-                                ?>
+                               <h2 align="center"><strong>We are automating the test scripts for you!!</strong></h2>
+                                <br>
+                                <h2 align="center"><strong>See you soon!!</strong></h2>
 
                             </div>
                         </div>
