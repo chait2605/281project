@@ -83,7 +83,7 @@ if( $db->connect_error ){
                             <li><a><i class="fa fa-edit"></i> Projects <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="existingProjects">Existing Projects</a></li>
-                                    <li><a href="form_upload.php">Upload Project Documents</a></li>
+                                    <li><a href="fileupload.php">Upload Project Documents</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>

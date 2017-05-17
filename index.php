@@ -72,7 +72,7 @@
                                     <li><a href="form_advanced.php">Advanced Components</a></li>
                                     <li><a href="form_validation.php">Form Validation</a></li>-->
                                     <li><a href="existingProjects.php">Existing Projects</a></li>
-                                    <li><a href="form_upload.php">Upload Project Documents</a></li>
+                                    <li><a href="fileupload.php">Upload Project Documents</a></li>
                                     <!--<li><a href="form_buttons.php">Form Buttons</a></li>-->
                                 </ul>
                             </li>
