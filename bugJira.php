@@ -93,7 +93,7 @@ if( $db->connect_error ){
                             </li>
                             <li><a><i class="fa fa-table"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="tables.html">Log Issues</a></li>
+                                    <li><a href="bugJira.php">Log Issues</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-bar-chart-o"></i> Project Summary <span class="fa fa-chevron-down"></span></a>
