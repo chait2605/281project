@@ -283,7 +283,6 @@ if( $db->connect_error ){
                                     curl_setopt($ch, CURLOPT_POST, 1);
                                     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', 'Authorization: Basic ' . $base64_usrpwd));
 
-
                                     $arr['project'] = array('key' => 'CT281');
                                     $arr['summary'] = $_POST['summary'];
                                     $arr['description'] = $_POST['description'];
@@ -293,14 +292,10 @@ if( $db->connect_error ){
 
                                     $json_string = json_encode($json_arr, JSON_NUMERIC_CHECK | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
 
-                                    //echo $json_string;
-
                                     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
                                     curl_setopt($ch, CURLOPT_POSTFIELDS, $json_string);
                                     $result = curl_exec($ch);
-                                    //echo $result;
                                     curl_close($ch);
-
 
                                     $json_issue_arr = json_decode($result,true);
                                     $json_issue_id = "key";
@@ -308,12 +303,6 @@ if( $db->connect_error ){
                                     $json_issue_type = $arr['issuetype']['name'];
 
                                     $issue_id = $json_issue_arr[$json_issue_id];
-
-                                    //echo $issue_id;
-                                    //echo $json_issue_summary;
-                                    //echo $json_issue_type;
-
-                                    //echo "<br><a href='https://crowstestmanager.atlassian.net/browse/$issue_id'>$issue_id</a>";
 
                                     if($issue_id){
 
@@ -324,7 +313,6 @@ if( $db->connect_error ){
 
                                     }
 
-
                                     echo "<h3 align='center'>Thank You! Issue has been Created Succesfully!!</h3>";
                                     echo "<br><div align='center'><button width='40%' height='30%' type='submit' name='issuelink' class='btn btn-success'><a href='https://crowstestmanager.atlassian.net/browse/$issue_id'><h2>$issue_id</h2></a></button></div>";
                                     echo "<br><div align='center'><button width='60%' height='40%' type='submit' name='createissuelink' class='btn btn - success'><a href='bugJira.php'><h2>Create a new Defect</h2></a></button></div>";
@@ -334,7 +322,6 @@ if( $db->connect_error ){
 
                                     echo "<h2 align=\"center\">Please try creating a new issue!</h2>";
                                     echo "<br><div align='center'><button width='40%' height='30%' type='submit' name='issuelink' class='btn btn - success'><a href='bugJira.php'><h2>Create a new Defect</h2></a></button></div>";
-
 
                                 }
 
