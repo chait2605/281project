@@ -101,6 +101,11 @@ if( $db->connect_error ){
                                     <li><a href="temp-summary.php">All Projects</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="bugJira.php">Automated Scripts</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

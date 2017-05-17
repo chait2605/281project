@@ -78,38 +78,23 @@
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                   <!-- <li><a href="general_elements.php">General Elements</a></li>
-                                    <li><a href="media_gallery.php">Media Gallery</a></li>
-                                    <li><a href="typography.php">Typography</a></li>
-                                    <li><a href="icons.php">Icons</a></li>
-                                    <li><a href="glyphicons.php">Glyphicons</a></li>
-                                    <li><a href="widgets.php">Widgets</a></li>
-                                    <li><a href="invoice.php">Invoice</a></li>
-                                    <li><a href="inbox.php">Inbox</a></li>
-                                    <li><a href="calendar.php">Calendar</a></li>-->
                                     <li><a href="createViewTS.php">Test Suites</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
-                                <!--<ul class="nav child_menu">
-                                    <li><a href="tables.php">Tables</a></li>
-                                    <li><a href="tables_dynamic.php">Table Dynamic</a></li>
-                                </ul>-->
-                            </li>
                             <li><a><i class="fa fa-bar-chart-o"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
-                                <!--<ul class="nav child_menu">
-                                    <li><a href="chartjs.php">Chart JS</a></li>
-                                    <li><a href="chartjs2.php">Chart JS2</a></li>
-                                    <li><a href="morisjs.php">Moris JS</a></li>
-                                    <li><a href="echarts.php">ECharts</a></li>
-                                    <li><a href="other_charts.php">Other Charts</a></li>
-                                </ul>-->
+                                <ul class="nav child_menu">
+                                    <li><a href="bugJira.php">Log Issues</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-table"></i> Test Automation <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="automatedTC.php">Automated Scripts</a></li>
+                                </ul>
                             </li>
                             <li><a><i class="fa fa-clone"></i>Projects Summary <span class="fa fa-chevron-down"></span></a>
-                                <!--<ul class="nav child_menu">
-                                    <li><a href="fixed_sidebar.php">Fixed Sidebar</a></li>
-                                    <li><a href="fixed_footer.php">Fixed Footer</a></li>
-                                </ul>-->
+                                <ul class="nav child_menu">
+                                    <li><a href="temp-summary.php">All Projects</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
