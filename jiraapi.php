@@ -107,6 +107,11 @@ if( $db->connect_error ){
                                     <li><a href="bugJira.php">Log Issues</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-table"></i>Test Automation <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="automatedTC.php">Automated Scripts</a></li>
+                                </ul>
+                            </li>
                             <li><a><i class="fa fa-bar-chart-o"></i> Project Summary <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="temp-summary.php">All Projects</a></li>
