@@ -368,7 +368,7 @@
                                     echo "<td class='col-sm-4'><input type='text' name='projectname' value='".$row['project_name']."'></td>";
                                     echo "<td><button type='submit' class='btn btn-success' name='update'>Update</button></td>";
                                     echo "<td><button type='submit' class='btn btn-success' name='delete'>Delete</button></td>";
-                                    echo "<td><button type='submit' class='btn btn-success' name='viewtc'>View Test Cases</button></td>";
+                                    echo "<td><button type='submit' class='btn btn-success' name='viewtc'><a href='displayTestCases.php'>View Test Cases</a></button></td>";
                                     echo "</form></tr>";
 
                                 }

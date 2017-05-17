@@ -40,6 +40,14 @@ if( $db->connect_error ){
 
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
+    <style>
+
+        .border { border-width: 5px; border-color: #07c3be; border-style: solid; }
+
+
+    </style>
+
+
 </head>
 
 <body class="nav-md">
@@ -234,7 +242,7 @@ if( $db->connect_error ){
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Files Related to Projects</h3>
+                        <h3>Test Cases!!</h3>
                     </div>
 
                 </div>
@@ -243,7 +251,7 @@ if( $db->connect_error ){
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Test Cases!!</h2>
+                                <h2>Find test cases below</h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -263,24 +271,40 @@ if( $db->connect_error ){
                             </div>
                             <div class="x_content">
                                 <table>
+                                    <tr>
 
                                     <?php
 
                                     $sql = "SELECT * FROM test_cases";
                                     $result = mysqli_query($db, $sql) or die("Bad connection: $sql");
+                                    //echo "<table width ='96' cellpadding='5' cellspace ='10' border='2'>";
 
-
+                                    $i=0;
 
                                     while ($row = mysqli_fetch_array($result)) {
 
 
-                                        echo "<td><a target ='_blank' href='testcases/{$row['tcfile']}'><img src='images/filesmall.jpg'/><br>{$row['tcname']}</a></td>";
+                                        echo "<td class='col-sm-3'><a id='trigger' target ='_blank' href='testcases/{$row['tcfile']}'><img src='images/filesmall.jpg' class='border'/><br>{$row['tcname']}</a></td>";
+                                        $i++;
+                                        if($i%4==0){
+
+                                            echo "</tr><tr>";
+
+                                        }
+
 
                                     }
+
+
+
 
                                     ?>
 
                                 </table>
+
+
+
+                                </div>
 
                             </div>
                         </div>
@@ -338,6 +362,15 @@ if( $db->connect_error ){
 <script src="vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="build/js/custom.min.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function() {
+        $('#trigger').click(function(){
+            $("#dialog").dialog();
+        });
+    });
+</script>
 
 </body>
 </html>
