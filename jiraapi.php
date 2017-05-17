@@ -321,7 +321,7 @@ if( $db->connect_error ){
 
 
                                     echo "<h3 align='center'>Thank You! Issue has been Created Succesfully!!</h3>";
-                                    echo "<br><div align='center'><button align='center' width='40%' height='30%' type='submit' name='issuelink' class='btn btn-success'><a href='https://crowstestmanager.atlassian.net/browse/$issue_id'><h2>$issue_id</h2></a></button></div>";
+                                    echo "<br><div align='center'><button width='40%' height='30%' type='submit' name='issuelink' class='btn btn-success'><a href='https://crowstestmanager.atlassian.net/browse/$issue_id'><h2>$issue_id</h2></a></button></div>";
                                     echo "<br><div align='center'><button width='60%' height='40%' type='submit' name='createissuelink' class='btn btn - success'><a href='bugJira.php'><h2>Create a new Defect</h2></a></button></div>";
 
                                 }else{
