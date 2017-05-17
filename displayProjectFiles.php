@@ -83,12 +83,13 @@ if( $db->connect_error ){
                             <li><a><i class="fa fa-edit"></i> Projects <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="existingProjects">Existing Projects</a></li>
-                                    <li><a href="projDocs.php">Upload Project Documents</a></li>
+                                    <li><a href="uploadTestCase.php">Upload Project Documents</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="createViewTS.php">Test Suites</a></li>
+                                    <li><a href="uploadTestCase.php">Upload Test Cases</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-table"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
@@ -273,7 +274,7 @@ if( $db->connect_error ){
                                     while ($row = mysqli_fetch_array($result)) {
 
 
-                                        echo "<td><a target ='_blank' href='projectdocs/{$row['project_name']}' alt='{$row['project_name']}'><img src='images/filesmall.jpg'/><br>{$row['project_name']}</a></td>";
+                                        echo "<td><a target ='_blank' href='projectdocs/{$row['file_name']}' alt='{$row['project_name']}'><img src='images/filesmall.jpg'/><br>{$row['project_name']}</a></td>";
 
                                     }
 

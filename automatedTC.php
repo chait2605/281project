@@ -59,7 +59,7 @@ if( $db->connect_error ){
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Test Manager</span></a>
+                    <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Test Manager</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -100,6 +100,7 @@ if( $db->connect_error ){
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="createViewTS.php">Test Suites</a></li>
+                                    <li><a href="uploadTestCase.php">Upload Test Cases</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-table"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>

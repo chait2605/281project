@@ -1,3 +1,13 @@
+<?php
+//connect to database
+$db = new mysqli("aadpk8b9wq1ns3.crugw38qv3oq.us-west-1.rds.amazonaws.com","CMPE281","cmpe28103","cloud281");
+
+//check connection
+if( $db->connect_error ){
+    die( 'Connect Error:' .$db->connect_errno . ':' . $db->connect_error);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Test Manager</title>
+    <title>Test Manager! | </title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,16 +76,19 @@
                             <!--  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">-->
                             <li><a href="index.php"> <i class="fa fa-home"></i>Dashboard</a></li>
+                            <!--<li><a href="index2.html">Dashboard2</a></li>
+                            <li><a href="index3.html">Dashboard3</a></li>-->
+                            <!--</ul>
+                          </li>-->
                             <li><a><i class="fa fa-edit"></i> Projects <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="existingProjects.php">Current Projects</a></li>
-                                    <li><a href="form_upload.php">Upload Project Documents</a></li>
+                                    <li><a href="existingProjects">Existing Projects</a></li>
+                                    <li><a href="fileupload.php">Upload Project Documents</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="createViewTS.php">Test Suites</a></li>
-                                    <li><a href="uploadTestCase.php">Upload Test Cases</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-table"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
@@ -88,12 +101,12 @@
                                     <li><a href="automatedTC.php">Automated Scripts</a></li>
                                 </ul>
                             </li>
-                            <li><a><i class="fa fa-clone"></i>Projects Summary <span class="fa fa-chevron-down"></span></a>
-                                <!--<ul class="nav child_menu">
-                                    <li><a href="fixed_sidebar.php">Fixed Sidebar</a></li>
-                                    <li><a href="fixed_footer.php">Fixed Footer</a></li>
-                                </ul>-->
+                            <li><a><i class="fa fa-bar-chart-o"></i> Project Summary <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="temp-summary.php">All Projects</a></li>
+                                </ul>
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -220,9 +233,8 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3>Test Suites</h3>
+                        <h3>Upload Test Cases</h3>
                     </div>
-
 
                 </div>
                 <div class="clearfix"></div>
@@ -230,7 +242,94 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="x_panel">
                             <div class="x_title">
-                                <h2>Create New Test Suite <small>create a new test suite</small></h2>
+                                <h2>Upload test cases here!!</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Settings 1</a>
+                                            </li>
+                                            <li><a href="#">Settings 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" align="center">
+                                <br />
+                                <form action="uploadTestCase.php" method="post" enctype="multipart/form-data">
+                                    <label><h2>Test Case Name</h2></label> <input type="text" name="ttl"><br>
+                                    <label><h2>Test Case Description</h2></label> <input type="text" name="description"><br>
+                                    <label><h2>Test Case File</h2></label>
+                                    <input type="file" name="img"><br>
+                                    <input type="submit" name="submit" value="Upload Test Case">
+
+                                </form>
+
+                                <?php
+                                if(isset($_FILES['img'])){
+                                    //var_dump($_FILES['img']);
+
+                                    $ttl = $_POST['ttl'];
+                                    $desc = $_POST['description'];
+
+                                    //echo $ttl;
+                                    //echo $desc;
+
+                                    $tempName = $_FILES['img']['tmp_name'];
+                                    $out = "Temp Name: $tempName <br>";
+                                    //echo $out;
+
+                                    //Replace spaces in image name with underscores
+                                    $cleanName = str_replace('','_', $_FILES['img']['name']);
+
+
+                                    //Change Name
+                                    $date = date_create();
+                                    $ts = date_timestamp_get($date);
+                                    $newFileName = $ts.$cleanName;
+                                    $newFile = "New Name: ".$newFileName."<br>";
+                                    //echo $newFile;
+
+                                    //move uploaded file to where we want it to be
+                                    move_uploaded_file($tempName, 'testcases/'.$newFileName);
+                                    echo "<h2><strong>Succesfully uploaded file to the server</strong></h2>";
+
+                                    $sql = "CREATE TABLE IF NOT EXISTS test_cases(
+                id integer not null primary key auto_increment,
+                tcname varchar(200),
+                tcdescription varchar(400),
+                tcfile varchar(400)
+                )";
+
+                                    $result = mysqli_query($db, $sql) or die("Bad connection: $sql");
+
+                                    $insert = "INSERT INTO test_cases (tcname, tcdescription, tcfile) VALUES ('$ttl', '$desc', '$newFileName')";
+
+                                    $insert_result = mysqli_query($db, $insert) or die("Bad connection: $insert");
+
+
+                                    //echo "<tr><td><a href='uploads/'>New File</a></td>";
+                                }
+
+
+
+
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Uploaded Test Cases!!</h2>
                                 <ul class="nav navbar-right panel_toolbox">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
@@ -249,187 +348,76 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="x_content">
-                                <br />
-                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="createViewTS.php">
 
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Test Suite Name <span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" name="tsname" required="required" class="form-control col-md-7 col-xs-12">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Test Suite Description <span class="required">*</span>
-                                        </label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" name="tsdesc" required="required" class="form-control col-md-7 col-xs-12">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Project Name</label>
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input name="pname" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
-                                        </div>
-                                    </div>
-                                    </div>
-                                    <div class="ln_solid"></div>
-                                    <div class="form-group">
-                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <button type="submit" class="btn btn-success" name="createtestsuite">Create Test Suite</button>
-                                        </div>
-                                    </div>
 
-                                </form>
+                                <tr><td><a href="displayTestCases.php" name="openfolder"><img src="images/folder.png"/></br>Test Cases</a></td></tr>
+
+
+
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <?php
-
-                //connect to database
-                $db = new mysqli("aadpk8b9wq1ns3.crugw38qv3oq.us-west-1.rds.amazonaws.com","CMPE281","cmpe28103","cloud281");
-
-                //check connection
-                if( $db->connect_error ){
-                    die( 'Connect Error:' .$db->connect_errno . ':' . $db->connect_error);
-                }
-
-
-                if(isset($_POST['createtestsuite'])){
-
-                    $testsuitename = $_POST['tsname'];
-                    $testsuitedesc = $_POST['tsdesc'];
-                    $projectname = $_POST['pname'];
-
-                    $sql = "INSERT INTO test_suites (test_suite_name,test_suite_desc,project_name) VALUES ('$testsuitename','$testsuitedesc','$projectname')";
-
-                    $query = mysqli_query($db,$sql) or die(mysqli_error($db));
-                }
-                if(isset($_POST['update'])){
-
-                    $id = $_POST['id'];
-                    $testsuitename = $_POST['testsuitename'];
-                    $testsuitedesc = $_POST['testsuitedesc'];
-                    $projectname = $_POST['projectname'];
-
-                    $sql = "UPDATE test_suites SET test_suite_name='$testsuitename',test_suite_desc='$testsuitedesc',project_name='$projectname' WHERE id = '$id'";
-
-                    $query = mysqli_query($db,$sql) or die(mysqli_error($db));
-                }
-
-                if(isset($_POST['delete'])){
-
-                    $id = $_POST['id'];
-                    $projectname = $_POST['testsuitename'];
-                    $projectdesc = $_POST['testsuitedesc'];
-                    $releasename = $_POST['projectname'];
-
-                    $sql = "DELETE FROM test_suites WHERE id = '$id'";
-
-                    $query = mysqli_query($db,$sql) or die(mysqli_error($db));
-                }
-
-
-                $sqlselect = "SELECT * FROM test_suites";
-
-                $query = mysqli_query($db,$sqlselect) or die(mysqli_error($db));
-
-                ?>
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="x_panel">
-                            <h2>Existing Test Suite Details</h2>
-                            <table align="center" width ='600' cellpadding='5' cellspace ='5'>
-                                <tr>
-                                    <th align="center">Test Suite Name</th>
-                                    <th align="center">Test Suite Description</th>
-                                    <th align="center">Project Name</th>
-                                </tr>
-                                <div col-sm-4 class="title_right">
-                                    <div class="col-md-3 col-sm-3 col-xs-3 form-group pull-right top_search">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Search for...">
-                                            <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <?php
-                                while($row = mysqli_fetch_array($query)){
-
-                                    echo "<tr><form id='demo-form2' data-parsley-validate class='form-horizontal form-label-left' action='createViewTS.php' method='post'>";
-                                    echo "<input type='hidden' name='id' value='".$row['id']."'>";
-                                    echo "<td class='col-sm-4'><input type='text' name='testsuitename' value='".$row['test_suite_name']."'></td>";
-                                    echo "<td class='col-sm-4'><input type='text' name='testsuitedesc' value='".$row['test_suite_desc']."'></td>";
-                                    echo "<td class='col-sm-4'><input type='text' name='projectname' value='".$row['project_name']."'></td>";
-                                    echo "<td><button type='submit' class='btn btn-success' name='update'>Update</button></td>";
-                                    echo "<td><button type='submit' class='btn btn-success' name='delete'>Delete</button></td>";
-                                    echo "<td><button type='submit' class='btn btn-success' name='viewtc'>View Test Cases</button></td>";
-                                    echo "</form></tr>";
-
-                                }
-
-
-                                ?>
-                            </table>
-                        </div>
-                    </div>
-                </div>
 
             </div>
-            <!-- /page content -->
 
-            <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    Crowd Sourced Testing-MTaaS: Test Manager Module by <a href="https://colorlib.com">Project Group 8</a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
+
+
+
         </div>
-    </div>
 
-    <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="vendors/iCheck/icheck.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="vendors/moment/min/moment.min.js"></script>
-    <script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <!-- bootstrap-wysiwyg -->
-    <script src="vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="vendors/google-code-prettify/src/prettify.js"></script>
-    <!-- jQuery Tags Input -->
-    <script src="vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-    <!-- Switchery -->
-    <script src="vendors/switchery/dist/switchery.min.js"></script>
-    <!-- Select2 -->
-    <script src="vendors/select2/dist/js/select2.full.min.js"></script>
-    <!-- Parsley -->
-    <script src="vendors/parsleyjs/dist/parsley.min.js"></script>
-    <!-- Autosize -->
-    <script src="vendors/autosize/dist/autosize.min.js"></script>
-    <!-- jQuery autocomplete -->
-    <script src="vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-    <!-- starrr -->
-    <script src="vendors/starrr/dist/starrr.js"></script>
-    <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                Crowd Sourced Testing-MTaaS: Test Manager Module by <a href="https://colorlib.com">Project Group 8</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="vendors/iCheck/icheck.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="vendors/moment/min/moment.min.js"></script>
+<script src="vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="vendors/starrr/dist/starrr.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="build/js/custom.min.js"></script>
 
 </body>
 </html>
+
 

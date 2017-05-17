@@ -100,6 +100,7 @@ if( $db->connect_error ){
                             <li><a><i class="fa fa-desktop"></i> Test Suites <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="createViewTS.php">Test Suites</a></li>
+                                    <li><a href="uploadTestCase.php">Upload Test Cases</a></li>
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-table"></i> Bug Reports <span class="fa fa-chevron-down"></span></a>
