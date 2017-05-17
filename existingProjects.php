@@ -68,7 +68,7 @@
                             <li><a href="index.php"> <i class="fa fa-home"></i>Dashboard</a></li>
                             <li><a><i class="fa fa-edit"></i> Projects <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="existingProjects.php">Current Projects</a></li>
+                                    <li><a href="existingProjects.php">Existing Projects</a></li>
                                     <li><a href="form_upload.php">Upload Project Documents</a></li>
                                 </ul>
                             </li>
@@ -302,7 +302,7 @@
                                     echo "<td class='col-sm-4'><input type='text' name='releasenumber' value='".$row['release_number']."'></td>";
                                     echo "<td><button type='submit' class='btn btn-success' name='update'>Update</button></td>";
                                     echo "<td><button type='submit' class='btn btn-success' name='delete'>Delete</button></td>";
-                                    echo "<td><button type='submit' class='btn btn-success' name='testsuite'><a href='createViewTS.php'>Create Test Suite</a></button></td>";
+                                    echo "<td><button type='submit' class='btn btn-success' name='testsuite'><a href='createViewTS.php'><b>Create Test Suite</b></a></button></td>";
                                     echo "</form></tr>";
 
                                 }
