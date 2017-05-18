@@ -1,2 +1,3 @@
-# 281project
-This project is dedicated to cmpe 281 term project
+# 281project 
+
+CROWD-SOURCED MOBILE TESTING TEST MANAGER COMPONENT
