@@ -40,6 +40,13 @@ if( $db->connect_error ){
 
     <!-- Custom Theme Style -->
     <link href="build/css/custom.min.css" rel="stylesheet">
+
+    <style>
+
+        .border { border-width: 5px; border-color: #07c3be; border-style: solid; }
+
+
+    </style>
 </head>
 
 <body class="nav-md">
@@ -82,7 +89,7 @@ if( $db->connect_error ){
                           </li>-->
                             <li><a><i class="fa fa-edit"></i> Projects <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="existingProjects">Existing Projects</a></li>
+                                    <li><a href="existingProjects.php">Existing Projects</a></li>
                                     <li><a href="uploadTestCase.php">Upload Project Documents</a></li>
                                 </ul>
                             </li>
@@ -263,19 +270,25 @@ if( $db->connect_error ){
                             </div>
                             <div class="x_content">
                                 <table>
+                                    <tr>
 
                                     <?php
 
                                     $sql = "SELECT * FROM project_files";
                                     $result = mysqli_query($db, $sql) or die("Bad connection: $sql");
 
-
+                                    $i=0;
 
                                     while ($row = mysqli_fetch_array($result)) {
 
 
-                                        echo "<td><a target ='_blank' href='projectdocs/{$row['file_name']}' alt='{$row['project_name']}'><img src='images/filesmall.jpg'/><br>{$row['project_name']}</a></td>";
+                                        echo "<td class='col-sm-3'><a target ='_blank' href='projectdocs/{$row['file_name']}' alt='{$row['project_name']}'><img src='images/filesmall.jpg' class='border'/><br>{$row['project_name']}</a></td>";
+                                        $i++;
+                                        if($i%4==0){
 
+                                            echo "</tr><tr>";
+
+                                        }
                                     }
 
                                     ?>
